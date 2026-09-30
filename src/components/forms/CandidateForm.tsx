@@ -76,7 +76,7 @@ export default function CandidateForm() {
     <div className="flex justify-center mb-6">
      <CheckCircle className="text-cyan-600 w-16 h-16" />
     </div>
-    <h2 className="text-2xl font-bold text-slate-600-900 mb-4">Form Completed (Demo)</h2>
+    <h2 className="text-2xl font-bold text-slate-900 mb-4">Form Completed (Demo)</h2>
     <p className="text-slate-600 mb-8 max-w-md mx-auto">
      Thank you for exploring the frontend demo. In a live environment, your profile would be securely received and considered for relevant opportunities.
     </p>
@@ -92,14 +92,14 @@ export default function CandidateForm() {
 
  return (
   <div className="bg-white rounded-2xl shadow-lg border border-slate-300 p-8 md:p-10">
-   <h2 className="text-2xl font-bold text-slate-600-900 mb-8">Submit Your Profile</h2>
+   <h2 className="text-2xl font-bold text-slate-900 mb-8">Submit Your Profile</h2>
    
    <form id="candidate-form" onSubmit={handleSubmit(onSubmit)} className="space-y-8">
     <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Full Name</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Full Name</label>
       <input
        {...register('fullName')}
        placeholder="e.g., John Doe"
@@ -110,7 +110,7 @@ export default function CandidateForm() {
       {errors.fullName && <p className="mt-1 text-sm text-red-500">{errors.fullName.message as string}</p>}
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Email</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Email</label>
       <input
        {...register('email')}
        type="email"
@@ -122,7 +122,7 @@ export default function CandidateForm() {
       {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message as string}</p>}
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Phone</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Phone</label>
       <input
        {...register('phone')}
        placeholder="e.g., +1 (555) 000-0000"
@@ -133,7 +133,7 @@ export default function CandidateForm() {
       {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message as string}</p>}
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Location</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Location</label>
       <input
        {...register('location')}
        placeholder="e.g., New York, NY"
@@ -144,7 +144,7 @@ export default function CandidateForm() {
       {errors.location && <p className="mt-1 text-sm text-red-500">{errors.location.message as string}</p>}
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Qualification (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Qualification (Optional)</label>
       <input
        {...register('qualification')}
        placeholder="e.g., Master's in Business"
@@ -152,7 +152,7 @@ export default function CandidateForm() {
       />
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Experience (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Experience (Optional)</label>
       <input
        {...register('experience')}
        placeholder="e.g., 5 years"
@@ -160,7 +160,7 @@ export default function CandidateForm() {
       />
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Current Role (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Current Role (Optional)</label>
       <input
        {...register('currentRole')}
        placeholder="e.g., Product Manager"
@@ -168,7 +168,7 @@ export default function CandidateForm() {
       />
      </div>
      <div>
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Preferred Role (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Preferred Role (Optional)</label>
       <input
        {...register('preferredRole')}
        placeholder="e.g., Senior Product Manager"
@@ -176,7 +176,7 @@ export default function CandidateForm() {
       />
      </div>
      <div className="md:col-span-2">
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Skills (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Skills (Optional)</label>
       <textarea
        {...register('skills')}
        placeholder="List your key skills, tools, and technologies..."
@@ -184,7 +184,7 @@ export default function CandidateForm() {
       />
      </div>
      <div className="md:col-span-2">
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Additional Information (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Additional Information (Optional)</label>
       <textarea
        {...register('additionalInfo')}
        placeholder="Any other details you'd like to share..."
@@ -193,14 +193,14 @@ export default function CandidateForm() {
      </div>
      
      <div className="md:col-span-2">
-      <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Upload Resume (Optional)</label>
+      <label className="block text-sm font-medium text-slate-900 mb-1.5">Upload Resume (Optional)</label>
       <div 
        className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center bg-slate-50 hover:bg-border/30 transition cursor-pointer"
        onClick={() => fileInputRef.current?.click()}
       >
-       <Upload className="w-8 h-8 text-slate-600-900-secondary mx-auto mb-3" />
-       <p className="text-sm font-medium text-slate-600-900 mb-1">Drag & drop or click to upload</p>
-       <p className="text-xs text-slate-600-900-secondary">Accepts .pdf, .doc, .docx</p>
+       <Upload className="w-8 h-8 text-slate-500 mx-auto mb-3" />
+       <p className="text-sm font-medium text-slate-900 mb-1">Drag & drop or click to upload</p>
+       <p className="text-xs text-slate-500">Accepts .pdf, .doc, .docx</p>
        {fileName && <p className="mt-3 text-sm text-cyan-600 font-medium">{fileName}</p>}
        <input
         type="file"
@@ -224,8 +224,8 @@ export default function CandidateForm() {
     )}
 
     <div>
-     <div className="bg-cyan-600-soft border border-cyan-600/20 rounded-lg p-4 mb-6">
-      <p className="text-sm text-slate-600-900-secondary">
+     <div className="bg-cyan-50 border border-cyan-600/20 rounded-lg p-4 mb-6">
+      <p className="text-sm text-slate-500">
        <span className="font-medium text-cyan-600 block mb-1">Important Disclaimer</span>
        Submitting your profile does not guarantee employment or an interview. Profiles are considered for relevant opportunities based on available vacancies and employer requirements.
       </p>

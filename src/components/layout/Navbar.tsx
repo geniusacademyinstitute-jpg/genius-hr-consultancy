@@ -77,7 +77,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center justify-center gap-4 2xl:gap-8 whitespace-nowrap">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
+              const isActive = location.pathname.startsWith(link.path);
               return (
                 <Link
                   key={link.path}

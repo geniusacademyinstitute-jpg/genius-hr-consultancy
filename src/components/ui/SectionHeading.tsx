@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface SectionHeadingProps {
- text-sm font-bold tracking-wider uppercase text-cyan-600?: string;
+ eyebrow?: string;
  title: string;
  description?: string;
  align?: 'left' | 'center';
@@ -10,7 +10,7 @@ interface SectionHeadingProps {
 }
 
 export default function SectionHeading({
- text-sm font-bold tracking-wider uppercase text-cyan-600,
+ eyebrow,
  title,
  description,
  align = 'center',
@@ -24,24 +24,24 @@ export default function SectionHeading({
    whileInView={{ opacity: 1, y: 0 }}
    viewport={{ once: true, margin: '-50px' }}
    transition={{ duration: 0.6 }}
-   className={`max-w-3xl ${alignClass}`}
+   className={`max-w-3xl ${alignClass} mb-12 lg:mb-16`}
   >
-   {text-sm font-bold tracking-wider uppercase text-cyan-600 && (
-    <span className="text-sm font-bold tracking-wider uppercase text-cyan-600 block text-cyan-600 font-bold tracking-wider uppercase text-sm mb-3">
-     {text-sm font-bold tracking-wider uppercase text-cyan-600}
+   {eyebrow && (
+    <span className="block text-cyan-600 font-bold tracking-wider uppercase text-sm mb-3">
+     {eyebrow}
     </span>
    )}
    <h2
-    className={` text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance ${
-     dark ? 'text-white' : 'text-slate-600-900'
+    className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance ${
+     dark ? 'text-white' : 'text-slate-900'
     }`}
    >
     {title}
    </h2>
    {description && (
     <p
-     className={`text-lg md:text-xl max-w-2xl ${align === 'center' ? 'mx-auto' : ''} ${
-      dark ? 'text-cyan-100/70' : 'text-slate-600'
+     className={`text-lg md:text-xl font-medium max-w-2xl ${align === 'center' ? 'mx-auto' : ''} ${
+      dark ? 'text-slate-400' : 'text-slate-600'
      }`}
     >
      {description}

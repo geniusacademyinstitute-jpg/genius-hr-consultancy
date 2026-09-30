@@ -108,7 +108,7 @@ export default function HiringRequirementForm() {
  const slideVariants = {
   hiddenRight: { x: 50, opacity: 0 },
   hiddenLeft: { x: -50, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' } },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' as const } },
   exitRight: { x: 50, opacity: 0, transition: { duration: 0.3 } },
   exitLeft: { x: -50, opacity: 0, transition: { duration: 0.3 } },
  };
@@ -119,7 +119,7 @@ export default function HiringRequirementForm() {
     <div className="flex justify-center mb-6">
      <CheckCircle className="text-cyan-600 w-16 h-16" />
     </div>
-    <h2 className="text-2xl font-bold text-slate-600-900 mb-4">Form Completed (Demo)</h2>
+    <h2 className="text-2xl font-bold text-slate-900 mb-4">Form Completed (Demo)</h2>
     <p className="text-slate-600 mb-8 max-w-md mx-auto">
      Thank you for exploring the frontend demo. In a live environment, this requirement would be securely transmitted to our recruitment team for review.
     </p>
@@ -142,7 +142,7 @@ export default function HiringRequirementForm() {
      <span className="text-sm font-medium text-slate-600">
       Step {currentStep + 1} of {STEPS.length}
      </span>
-     <span className="text-sm font-bold text-slate-600-900">
+     <span className="text-sm font-bold text-slate-900">
       {STEPS[currentStep].label}
      </span>
     </div>
@@ -192,10 +192,10 @@ export default function HiringRequirementForm() {
        {/* STEP 1: COMPANY */}
        {currentStep === 0 && (
         <div className="space-y-6">
-         <h3 className="text-xl font-bold text-slate-600-900 mb-6">Company Information</h3>
+         <h3 className="text-xl font-bold text-slate-900 mb-6">Company Information</h3>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Company Name</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Company Name</label>
            <input
             {...register('companyName')}
             placeholder="e.g., Acme Technologies Pvt. Ltd."
@@ -206,7 +206,7 @@ export default function HiringRequirementForm() {
            {errors.companyName && <p className="mt-1 text-sm text-red-500">{errors.companyName.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Contact Person</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Contact Person</label>
            <input
             {...register('contactPerson')}
             placeholder="e.g., Jane Doe"
@@ -217,7 +217,7 @@ export default function HiringRequirementForm() {
            {errors.contactPerson && <p className="mt-1 text-sm text-red-500">{errors.contactPerson.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Designation</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Designation</label>
            <input
             {...register('designation')}
             placeholder="e.g., HR Director"
@@ -228,7 +228,7 @@ export default function HiringRequirementForm() {
            {errors.designation && <p className="mt-1 text-sm text-red-500">{errors.designation.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Phone</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Phone</label>
            <input
             {...register('phone')}
             placeholder="e.g., +1 (555) 000-0000"
@@ -239,7 +239,7 @@ export default function HiringRequirementForm() {
            {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Email</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Email</label>
            <input
             {...register('email')}
             type="email"
@@ -251,7 +251,7 @@ export default function HiringRequirementForm() {
            {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Location</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Location</label>
            <input
             {...register('location')}
             placeholder="e.g., New York, NY"
@@ -268,10 +268,10 @@ export default function HiringRequirementForm() {
        {/* STEP 2: POSITION */}
        {currentStep === 1 && (
         <div className="space-y-6">
-         <h3 className="text-xl font-bold text-slate-600-900 mb-6">Position Details</h3>
+         <h3 className="text-xl font-bold text-slate-900 mb-6">Position Details</h3>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Job Title</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Job Title</label>
            <input
             {...register('jobTitle')}
             placeholder="e.g., Senior Software Engineer"
@@ -282,7 +282,7 @@ export default function HiringRequirementForm() {
            {errors.jobTitle && <p className="mt-1 text-sm text-red-500">{errors.jobTitle.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Department (Optional)</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Department (Optional)</label>
            <input
             {...register('department')}
             placeholder="e.g., Engineering"
@@ -290,7 +290,7 @@ export default function HiringRequirementForm() {
            />
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Number of Openings</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Number of Openings</label>
            <input
             {...register('numberOfOpenings')}
             type="number"
@@ -302,7 +302,7 @@ export default function HiringRequirementForm() {
            {errors.numberOfOpenings && <p className="mt-1 text-sm text-red-500">{errors.numberOfOpenings.message as string}</p>}
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Job Location</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Job Location</label>
            <input
             {...register('jobLocation')}
             placeholder="e.g., Austin, TX"
@@ -313,7 +313,7 @@ export default function HiringRequirementForm() {
            {errors.jobLocation && <p className="mt-1 text-sm text-red-500">{errors.jobLocation.message as string}</p>}
           </div>
           <div className="relative">
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Work Mode</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Work Mode</label>
            <select
             {...register('workMode')}
             className={`appearance-none w-full px-4 py-3 rounded-lg border bg-white outline-none transition text-sm
@@ -328,7 +328,7 @@ export default function HiringRequirementForm() {
            {errors.workMode && <p className="mt-1 text-sm text-red-500">{errors.workMode.message as string}</p>}
           </div>
           <div className="relative">
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Employment Type</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Employment Type</label>
            <select
             {...register('employmentType')}
             className={`appearance-none w-full px-4 py-3 rounded-lg border bg-white outline-none transition text-sm
@@ -350,10 +350,10 @@ export default function HiringRequirementForm() {
        {/* STEP 3: CANDIDATE */}
        {currentStep === 2 && (
         <div className="space-y-6">
-         <h3 className="text-xl font-bold text-slate-600-900 mb-6">Candidate Profile Requirements</h3>
+         <h3 className="text-xl font-bold text-slate-900 mb-6">Candidate Profile Requirements</h3>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Qualification (Optional)</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Qualification (Optional)</label>
            <input
             {...register('qualification')}
             placeholder="e.g., Bachelor's in Computer Science"
@@ -361,7 +361,7 @@ export default function HiringRequirementForm() {
            />
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Experience (Optional)</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Experience (Optional)</label>
            <input
             {...register('experience')}
             placeholder="e.g., 5-7 years"
@@ -369,7 +369,7 @@ export default function HiringRequirementForm() {
            />
           </div>
           <div className="md:col-span-2">
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Skills (Optional)</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Skills (Optional)</label>
            <textarea
             {...register('skills')}
             placeholder="e.g., React, TypeScript, Node.js"
@@ -377,7 +377,7 @@ export default function HiringRequirementForm() {
            />
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Salary Range (Optional)</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Salary Range (Optional)</label>
            <input
             {...register('salaryRange')}
             placeholder="e.g., $100k - $120k"
@@ -385,7 +385,7 @@ export default function HiringRequirementForm() {
            />
           </div>
           <div>
-           <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Joining Timeline (Optional)</label>
+           <label className="block text-sm font-medium text-slate-900 mb-1.5">Joining Timeline (Optional)</label>
            <input
             {...register('joiningTimeline')}
             placeholder="e.g., Immediate, 30 days"
@@ -399,9 +399,9 @@ export default function HiringRequirementForm() {
        {/* STEP 4: REQUIREMENT */}
        {currentStep === 3 && (
         <div className="space-y-6">
-         <h3 className="text-xl font-bold text-slate-600-900 mb-6">Detailed Requirement</h3>
+         <h3 className="text-xl font-bold text-slate-900 mb-6">Detailed Requirement</h3>
          <div>
-          <label className="block text-sm font-medium text-slate-600-900 mb-1.5">
+          <label className="block text-sm font-medium text-slate-900 mb-1.5">
            Tell us about the role and the candidate you are looking for.
           </label>
           <textarea
@@ -415,13 +415,13 @@ export default function HiringRequirementForm() {
          </div>
          
          <div>
-          <label className="block text-sm font-medium text-slate-600-900 mb-1.5">Upload Job Description (Optional)</label>
+          <label className="block text-sm font-medium text-slate-900 mb-1.5">Upload Job Description (Optional)</label>
           <div 
            className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center bg-slate-50 hover:bg-border/30 transition cursor-pointer"
            onClick={() => fileInputRef.current?.click()}
           >
            <Upload className="w-8 h-8 text-slate-600 mx-auto mb-3" />
-           <p className="text-sm font-medium text-slate-600-900 mb-1">Drag & drop or click to upload</p>
+           <p className="text-sm font-medium text-slate-900 mb-1">Drag & drop or click to upload</p>
            <p className="text-xs text-slate-600">Accepts .pdf, .doc, .docx</p>
            {fileName && <p className="mt-3 text-sm text-cyan-600 font-medium">{fileName}</p>}
            <input
@@ -439,37 +439,37 @@ export default function HiringRequirementForm() {
        {/* STEP 5: REVIEW */}
        {currentStep === 4 && (
         <div className="space-y-8">
-         <h3 className="text-xl font-bold text-slate-600-900 mb-2">Review & Submit</h3>
+         <h3 className="text-xl font-bold text-slate-900 mb-2">Review & Submit</h3>
          
          {/* Company Details */}
          <div className="border border-slate-300 rounded-xl p-6 bg-slate-50">
           <div className="flex justify-between items-center mb-4">
-           <h4 className="font-bold text-slate-600-900">Company Information</h4>
+           <h4 className="font-bold text-slate-900">Company Information</h4>
            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(0); }} className="text-cyan-600 text-sm font-medium hover:underline">Edit</button>
           </div>
           <div className="grid grid-cols-2 gap-4 text-sm">
-           <div><span className="text-slate-600 block">Company</span><span className="font-medium text-slate-600-900">{formValues.companyName}</span></div>
-           <div><span className="text-slate-600 block">Contact Person</span><span className="font-medium text-slate-600-900">{formValues.contactPerson}</span></div>
-           <div><span className="text-slate-600 block">Designation</span><span className="font-medium text-slate-600-900">{formValues.designation}</span></div>
-           <div><span className="text-slate-600 block">Phone</span><span className="font-medium text-slate-600-900">{formValues.phone}</span></div>
-           <div><span className="text-slate-600 block">Email</span><span className="font-medium text-slate-600-900">{formValues.email}</span></div>
-           <div><span className="text-slate-600 block">Location</span><span className="font-medium text-slate-600-900">{formValues.location}</span></div>
+           <div><span className="text-slate-600 block">Company</span><span className="font-medium text-slate-900">{formValues.companyName}</span></div>
+           <div><span className="text-slate-600 block">Contact Person</span><span className="font-medium text-slate-900">{formValues.contactPerson}</span></div>
+           <div><span className="text-slate-600 block">Designation</span><span className="font-medium text-slate-900">{formValues.designation}</span></div>
+           <div><span className="text-slate-600 block">Phone</span><span className="font-medium text-slate-900">{formValues.phone}</span></div>
+           <div><span className="text-slate-600 block">Email</span><span className="font-medium text-slate-900">{formValues.email}</span></div>
+           <div><span className="text-slate-600 block">Location</span><span className="font-medium text-slate-900">{formValues.location}</span></div>
           </div>
          </div>
 
          {/* Position Details */}
          <div className="border border-slate-300 rounded-xl p-6 bg-slate-50">
           <div className="flex justify-between items-center mb-4">
-           <h4 className="font-bold text-slate-600-900">Position Details</h4>
+           <h4 className="font-bold text-slate-900">Position Details</h4>
            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-cyan-600 text-sm font-medium hover:underline">Edit</button>
           </div>
           <div className="grid grid-cols-2 gap-4 text-sm">
-           <div><span className="text-slate-600 block">Job Title</span><span className="font-medium text-slate-600-900">{formValues.jobTitle}</span></div>
-           <div><span className="text-slate-600 block">Department</span><span className="font-medium text-slate-600-900">{formValues.department || '-'}</span></div>
-           <div><span className="text-slate-600 block">Openings</span><span className="font-medium text-slate-600-900">{formValues.numberOfOpenings}</span></div>
-           <div><span className="text-slate-600 block">Location</span><span className="font-medium text-slate-600-900">{formValues.jobLocation}</span></div>
-           <div><span className="text-slate-600 block">Work Mode</span><span className="font-medium text-slate-600-900">{formValues.workMode}</span></div>
-           <div><span className="text-slate-600 block">Type</span><span className="font-medium text-slate-600-900">{formValues.employmentType}</span></div>
+           <div><span className="text-slate-600 block">Job Title</span><span className="font-medium text-slate-900">{formValues.jobTitle}</span></div>
+           <div><span className="text-slate-600 block">Department</span><span className="font-medium text-slate-900">{formValues.department || '-'}</span></div>
+           <div><span className="text-slate-600 block">Openings</span><span className="font-medium text-slate-900">{formValues.numberOfOpenings}</span></div>
+           <div><span className="text-slate-600 block">Location</span><span className="font-medium text-slate-900">{formValues.jobLocation}</span></div>
+           <div><span className="text-slate-600 block">Work Mode</span><span className="font-medium text-slate-900">{formValues.workMode}</span></div>
+           <div><span className="text-slate-600 block">Type</span><span className="font-medium text-slate-900">{formValues.employmentType}</span></div>
           </div>
          </div>
 
@@ -494,7 +494,7 @@ export default function HiringRequirementForm() {
       type="button"
       onClick={handleBack}
       className={`px-6 py-2.5 rounded-lg font-medium transition-colors text-sm
-       ${currentStep === 0 ? 'opacity-0 pointer-events-none' : 'text-slate-600-900 hover:bg-slate-50 border border-slate-300'}
+       ${currentStep === 0 ? 'opacity-0 pointer-events-none' : 'text-slate-900 hover:bg-slate-50 border border-slate-300'}
       `}
      >
       Back

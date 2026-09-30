@@ -40,10 +40,10 @@ export default function Footer() {
               WhatsApp: {business.whatsapp}
             </a>
             <div className="text-left md:text-right mt-2 text-xs text-slate-500 leading-relaxed max-w-[200px]">
-              {business.address.line1}, {business.address.line2}, {business.address.city}, {business.address.state} {business.address.pincode}
+              {business.address.full}
             </div>
             <div className="text-left md:text-right text-xs text-slate-500 font-bold mt-1">
-              {business.businessHours.weekdays} <br/> {business.businessHours.hours}
+              {business.businessHours.weekdays} <br/> {business.businessHours.weekends}
             </div>
           </div>
         </div>
