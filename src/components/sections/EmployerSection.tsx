@@ -23,7 +23,7 @@ export default function EmployerSection() {
             <p className="text-slate-600 font-medium text-lg mb-10 leading-relaxed max-w-lg">
               Whether you are hiring for one position or managing multiple openings, share the requirement with our recruitment team and we will understand the role before beginning the candidate search process.
             </p>
-            <Button href="/employers" variant="primary" size="lg">
+            <Button href="/employers" variant="primary" size="lg" className="w-full sm:w-auto">
               Submit Hiring Requirement
             </Button>
           </motion.div>

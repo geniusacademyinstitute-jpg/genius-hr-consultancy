@@ -29,8 +29,8 @@ export default function FinalCTA() {
             Let's start with the requirement.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/employers" variant="primary" size="lg">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <Button href="/employers" variant="primary" size="lg" className="w-full sm:w-auto">
               Submit Hiring Requirement
             </Button>
           </div>

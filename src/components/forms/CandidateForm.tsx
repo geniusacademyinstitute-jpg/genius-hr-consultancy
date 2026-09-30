@@ -125,6 +125,7 @@ export default function CandidateForm() {
       <label className="block text-sm font-medium text-slate-900 mb-1.5">Phone</label>
       <input
        {...register('phone')}
+       type="tel"
        placeholder="e.g., +1 (555) 000-0000"
        className={`w-full px-4 py-3 rounded-lg border bg-white outline-none transition text-sm
         ${errors.phone ? 'border-red-500 focus:ring-red-500/10' : 'border-slate-300 focus:border-cyan-600 placeholder:text-[#94A3B8] focus:ring-2 focus:ring-indigo/10'}
@@ -231,11 +232,11 @@ export default function CandidateForm() {
       </p>
      </div>
      
-     <div className="flex justify-end">
+     <div className="flex flex-col sm:flex-row justify-end">
       <button
        type="submit"
        disabled={isSubmitting}
-       className="px-8 py-3 bg-cyan-600 text-white rounded-lg font-medium hover:bg-cyan-600/90 transition-colors text-sm flex items-center gap-2 disabled:opacity-70"
+       className="w-full sm:w-auto px-8 py-3 bg-cyan-600 text-white rounded-lg font-medium hover:bg-cyan-600/90 transition-colors text-sm flex items-center justify-center gap-2 disabled:opacity-70"
       >
        {isSubmitting ? (
         <>

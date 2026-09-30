@@ -231,6 +231,7 @@ export default function HiringRequirementForm() {
            <label className="block text-sm font-medium text-slate-900 mb-1.5">Phone</label>
            <input
             {...register('phone')}
+            type="tel"
             placeholder="e.g., +1 (555) 000-0000"
             className={`w-full px-4 py-3 rounded-lg border bg-white outline-none transition text-sm
              ${errors.phone ? 'border-red-500 focus:ring-red-500/10' : 'border-slate-300 focus:border-cyan-600 placeholder:text-[#94A3B8] focus:ring-2 focus:ring-indigo/10'}
@@ -489,12 +490,12 @@ export default function HiringRequirementForm() {
     </div>
 
     {/* Navigation */}
-    <div className="mt-8 pt-6 border-t border-slate-300 flex items-center justify-between">
+    <div className="mt-8 pt-6 border-t border-slate-300 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-4">
      <button
       type="button"
       onClick={handleBack}
-      className={`px-6 py-2.5 rounded-lg font-medium transition-colors text-sm
-       ${currentStep === 0 ? 'opacity-0 pointer-events-none' : 'text-slate-900 hover:bg-slate-50 border border-slate-300'}
+      className={`w-full sm:w-auto px-6 py-3 sm:py-2.5 rounded-lg font-medium transition-colors text-sm
+       ${currentStep === 0 ? 'opacity-0 hidden sm:block pointer-events-none' : 'text-slate-900 hover:bg-slate-50 border border-slate-300'}
       `}
      >
       Back
@@ -504,7 +505,7 @@ export default function HiringRequirementForm() {
       <button
        type="button"
        onClick={handleNext}
-       className="px-6 py-2.5 bg-cyan-600 text-white rounded-lg font-medium hover:bg-cyan-600/90 transition-colors text-sm"
+       className="w-full sm:w-auto px-6 py-3 sm:py-2.5 bg-cyan-600 text-white rounded-lg font-medium hover:bg-cyan-600/90 transition-colors text-sm"
       >
        Continue
       </button>
@@ -512,7 +513,7 @@ export default function HiringRequirementForm() {
       <button
        type="submit"
        disabled={isSubmitting}
-       className="px-6 py-2.5 bg-cyan-600 text-white rounded-lg font-medium hover:bg-cyan-600/90 transition-colors text-sm flex items-center gap-2 disabled:opacity-70"
+       className="w-full sm:w-auto px-6 py-3 sm:py-2.5 bg-cyan-600 text-white rounded-lg font-medium hover:bg-cyan-600/90 transition-colors text-sm flex items-center justify-center gap-2 disabled:opacity-70"
       >
        {isSubmitting ? (
         <>

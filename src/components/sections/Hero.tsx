@@ -40,7 +40,7 @@ export default function Hero() {
             
             <motion.h1 
               variants={itemVariants}
-              className="mt-2 text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]"
+              className="mt-2 text-[clamp(2.5rem,8vw,4.5rem)] font-bold tracking-tight text-slate-900 leading-[1.1]"
             >
               <span className="block">Your Hiring.</span>
               <span className="block text-cyan-600 mt-1">Our Recruitment Expertise.</span>
@@ -57,10 +57,10 @@ export default function Hero() {
               variants={itemVariants}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-              <Button href="/employers" variant="primary" size="lg">
+              <Button href="/employers" variant="primary" size="lg" className="w-full sm:w-auto">
                 Submit Hiring Requirement
               </Button>
-              <Button href="/contact" variant="secondary" size="lg">
+              <Button href="/contact" variant="secondary" size="lg" className="w-full sm:w-auto">
                 Talk to Our Team
               </Button>
             </motion.div>

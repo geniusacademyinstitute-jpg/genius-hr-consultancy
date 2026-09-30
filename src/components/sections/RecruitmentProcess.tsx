@@ -41,26 +41,34 @@ export default function RecruitmentProcess() {
           whileInView="visible" 
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 before:absolute before:left-6 before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-800 md:before:hidden"
         >
           {processSteps.map((step, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 relative overflow-hidden group hover:bg-slate-800 transition-colors duration-300 flex flex-col h-full"
+              className="relative pl-16 md:pl-0 flex flex-col h-full group"
             >
-              <div className="absolute top-0 right-0 p-6 text-6xl font-black text-slate-700/30 group-hover:text-cyan-500/10 transition-colors duration-300 pointer-events-none">
+              {/* Mobile Timeline Node */}
+              <div className="absolute left-0 top-1 w-12 h-12 bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center font-bold text-cyan-400 z-10 md:hidden">
                 {step.id}
               </div>
-              <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center font-bold text-cyan-400 border border-slate-700 mb-6 relative z-10">
-                {step.id}
+
+              {/* Card */}
+              <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 md:p-8 relative overflow-hidden group-hover:bg-slate-800 transition-colors duration-300 flex-1">
+                <div className="absolute top-0 right-0 p-6 text-6xl font-black text-slate-700/30 group-hover:text-cyan-500/10 transition-colors duration-300 pointer-events-none">
+                  {step.id}
+                </div>
+                <div className="hidden md:flex w-12 h-12 bg-slate-900 rounded-full items-center justify-center font-bold text-cyan-400 border border-slate-700 mb-6 relative z-10">
+                  {step.id}
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2 relative z-10">
+                  {step.title}
+                </h3>
+                <p className="text-sm md:text-base text-slate-400 font-medium relative z-10">
+                  {step.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 relative z-10">
-                {step.title}
-              </h3>
-              <p className="text-slate-400 font-medium relative z-10">
-                {step.desc}
-              </p>
             </motion.div>
           ))}
         </motion.div>

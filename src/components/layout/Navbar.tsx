@@ -101,7 +101,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="xl:hidden relative z-50 p-2 text-slate-900"
+            className="xl:hidden relative z-50 w-11 h-11 flex items-center justify-center -mr-2 text-slate-900"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

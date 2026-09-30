@@ -31,7 +31,7 @@ export default function MobileActionBar() {
     
     <Link 
      to="/employers"
-     className="flex-1 flex flex-col items-center gap-1.5 text-[13px] font-semibold text-cyan-600 hover:text-cyan-600-deep transition-colors"
+     className="flex-1 flex flex-col items-center gap-1.5 text-[13px] font-semibold text-cyan-600 hover:text-cyan-700 transition-colors"
     >
      <FileText size={22} />
      <span>Submit Req</span>

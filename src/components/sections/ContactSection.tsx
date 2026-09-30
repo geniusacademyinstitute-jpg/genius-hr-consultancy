@@ -18,10 +18,10 @@ const ContactSection = () => {
       transition={{ duration: 0.5 }}
       className="mb-12 lg:mb-0 flex flex-col justify-center"
      >
-      <h2 className=" text-4xl lg:text-5xl font-bold text-slate-600-600-900 mb-6 leading-tight">
+      <h2 className=" text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
        Let's Talk About Your Next Hire.
       </h2>
-      <p className="text-slate-600-600 text-lg mb-8 leading-relaxed">
+      <p className="text-slate-600 text-lg mb-8 leading-relaxed">
        Have a position to fill or a recruitment requirement to discuss? Connect with our team and tell us what you are looking for.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
@@ -48,10 +48,10 @@ const ContactSection = () => {
          <Phone size={24} />
         </div>
         <div>
-         <p className="font-medium text-slate-600-600-900 group-hover:text-cyan-600 transition-colors">
+         <p className="font-medium text-slate-900 group-hover:text-cyan-600 transition-colors">
           {business.phone}
          </p>
-         <p className="text-sm text-slate-600-600">Call us</p>
+         <p className="text-sm text-slate-600">Call us</p>
         </div>
        </a>
        
@@ -60,10 +60,10 @@ const ContactSection = () => {
          <MessageCircle size={24} />
         </div>
         <div>
-         <p className="font-medium text-slate-600-600-900 group-hover:text-cyan-600 transition-colors">
+         <p className="font-medium text-slate-900 group-hover:text-cyan-600 transition-colors">
           WhatsApp
          </p>
-         <p className="text-sm text-slate-600-600">Message us anytime</p>
+         <p className="text-sm text-slate-600">Message us anytime</p>
         </div>
        </a>
 
@@ -72,10 +72,10 @@ const ContactSection = () => {
          <Mail size={24} />
         </div>
         <div>
-         <p className="font-medium text-slate-600-600-900 group-hover:text-cyan-600 transition-colors">
+         <p className="font-medium text-slate-900 group-hover:text-cyan-600 transition-colors">
           {business.email}
          </p>
-         <p className="text-sm text-slate-600-600">Email us</p>
+         <p className="text-sm text-slate-600">Email us</p>
         </div>
        </a>
 
@@ -84,10 +84,10 @@ const ContactSection = () => {
          <MapPin size={24} />
         </div>
         <div>
-         <p className="font-medium text-slate-600-600-900">
+         <p className="font-medium text-slate-900">
           {business.address.full}
          </p>
-         <p className="text-sm text-slate-600-600">Location</p>
+         <p className="text-sm text-slate-600">Location</p>
         </div>
        </div>
 
@@ -96,10 +96,10 @@ const ContactSection = () => {
          <Clock size={24} />
         </div>
         <div>
-         <p className="font-medium text-slate-600-600-900">
+         <p className="font-medium text-slate-900">
           {business.businessHours.weekdays}
          </p>
-         <p className="text-sm text-slate-600-600">{business.businessHours.weekends}</p>
+         <p className="text-sm text-slate-600">{business.businessHours.weekends}</p>
         </div>
        </div>
       </div>
@@ -118,7 +118,7 @@ const ContactSection = () => {
          title="Office Location"
         ></iframe>
        ) : (
-        <span className="text-slate-600-600 text-sm">Map view unavailable</span>
+        <span className="text-slate-600 text-sm">Map view unavailable</span>
        )}
       </div>
      </motion.div>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import { MotionConfig } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import MobileActionBar from './MobileActionBar';
@@ -16,14 +17,16 @@ function ScrollToTop() {
 
 export default function Layout() {
  return (
-  <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
-   <ScrollToTop />
-   <Navbar />
-   <main className="flex-grow pt-[80px]">
-    <Outlet />
-   </main>
-   <Footer />
-   <MobileActionBar />
-  </div>
+  <MotionConfig reducedMotion="user">
+   <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans pb-16 md:pb-0">
+    <ScrollToTop />
+    <Navbar />
+    <main className="flex-grow pt-[80px]">
+     <Outlet />
+    </main>
+    <Footer />
+    <MobileActionBar />
+   </div>
+  </MotionConfig>
  );
 }
